@@ -39,14 +39,58 @@ console.log(negate(-8));
 
 var toArray = function(a,b,c) {
 	return [a,b,c];
-}
+};
 
 console.log(toArray(1,4,5));
 console.log(toArray(8,9,10));
 
+// Write a function called 'startsWithA' which takes a single string argument and returns true if the given string's first letter is 'A' and false otherwise.
 
+var startsWithA = function(s) {
+	return s.toUpperCase().charAt(0) === "A";
+};
 
+console.log(startsWithA("aardvark"));
+console.log(startsWithA("bear"));
 
+// Write a function called 'excite' which takes a single string argument and returns the given string plus three exclamation marks.
+
+var excite = function(s) {
+	return s + "!!!";
+};
+
+console.log(excite("yes"));
+console.log(excite("go"));
+
+// Write a function called 'sun' which takes a single string argument and returns true if the string contains the word 'sun' within it.
+
+var sun = function(s) {
+	return s.indexOf("sun") != -1;
+};
+
+console.log(sun("sundries"));
+console.log(sun("asunder"));
+console.log(sun("catapult"));
+
+// Write a function called 'tiny' which takes a single number argument and returns true if the number is between 0 and 1.
+
+var tiny = function(num) {
+	return num > 0 && num < 1;
+};
+
+console.log(tiny(0.3));
+console.log(tiny(14));
+console.log(tiny(-5));
+
+// Write a function called 'getSeconds' which takes a single string argument in the format 'MM:SS' (minutes, and seconds) and returns the total number of seconds represented by that timespan.
+
+var getSeconds = function(time) {
+	var nums = time.split(":");
+	return (parseInt(nums[0]) * 60) + parseInt(nums[1]);
+};
+
+console.log(getSeconds("01:30"));
+console.log(getSeconds("10:25"));
 
 
 
